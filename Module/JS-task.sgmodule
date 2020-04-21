@@ -48,7 +48,7 @@ ximalaya.js = type=cron,cronexp=40 1 0 * * *,script-path=https://raw.githubuserc
 
 # 中国移动
 # 打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
-10086.js = type=cron,cronexp=30 2 0 * * *,script-path=ttps://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js
+10086.js = type=cron,cronexp=30 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js
 
 # 美团外卖
 # 打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
