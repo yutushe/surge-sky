@@ -26,13 +26,13 @@ JD_DailyBonus.js = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubu
 # @chavyleung
 # bilibili
 # 打开浏览器访问: https://www.bilibili.com 或 https://live.bilibili.com
-bilibili.js = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
+# bilibili.js = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
 # 如需银瓜子转硬币，取消下方注释
 # bilibili.silver2coin.js = type=cron,cronexp=40 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
 
 # 人人视频
 # 打开 APP, 访问下`个人中心`
-rrtv.js = type=cron,cronexp=15 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0
+# rrtv.js = type=cron,cronexp=15 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0
 
 # 腾讯视频
 # 1.手机浏览器访问并登录: https://film.qq.com/
