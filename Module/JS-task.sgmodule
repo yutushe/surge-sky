@@ -36,15 +36,15 @@ rrtv.js = type=cron,cronexp=15 1 0 * * *,script-path=https://raw.githubuserconte
 
 # 腾讯视频
 # 1.手机浏览器访问并登录: https://film.qq.com/
-videoqq.js = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
+# videoqq.js = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
 
 # 喜马拉雅
 # 打开 APP, 访问下右下角`账号`
-ximalaya.js = type=cron,cronexp=40 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
+# ximalaya.js = type=cron,cronexp=40 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
 
 # 中国移动
 # 打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
-10086.js = type=cron,cronexp=30 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js
+# 10086.js = type=cron,cronexp=30 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js
 
 # 美团外卖
 # 打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
@@ -52,7 +52,7 @@ ximalaya.js = type=cron,cronexp=40 1 0 * * *,script-path=https://raw.githubuserc
 
 # 美团
 # 打开 APP , 然后手动签到 1 次, (`首页` > `红包签到`)
-meituan.js = type=cron,cronexp=40 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
+# meituan.js = type=cron,cronexp=40 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
 
 # 时光相册
 # 打开 APP 然后手动签到 1 次
@@ -72,7 +72,7 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 
 # 饿了么   (By @syzzzf)
 # 打开 APP, 访问下`我的`>`签到领红包`(左上角)
-elemSign.js = type=cron,cronexp=35 4 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
+# elemSign.js = type=cron,cronexp=35 4 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
 
 # 京东到家 (@barrymchen, @GideonSenku & @Macsuny)
 # APP登陆账号后，点击主页’签到‘,即可
@@ -84,12 +84,12 @@ lkyl.js = type=cron,cronexp=30 5 0 * * *,script-path=https://raw.githubuserconte
 
 # 快手极速版 (By @Macsuny)
 # APP登陆账号后，点击’钱包‘
-kuaishou.js = type=cron,cronexp=40 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/kuaishou.js,script-update-interval=0
+# kuaishou.js = type=cron,cronexp=40 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/kuaishou.js,script-update-interval=0
 
 # 喜马拉雅极速版
 # APP登陆账号后，点击右下角’福利’选项,即可获取Cookie.
 # 每隔一小时开启一次，每天最多5次，金币账户与标准版不同账户
-xmspeed.js = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmspeed.js
+# xmspeed.js = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmspeed.js
 
 # 微信小程序-活动抽奖 (By @makexp & @zZPiglet)
 #打开微信小程序 进入“活动抽奖”，手动签到一次或点击“已签到”
