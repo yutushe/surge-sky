@@ -64,6 +64,3 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 
 # > 京东萌宠 (By liuxiaoyucc)
 京东农场= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_pet.js
-
-# > qq会员成长值签到 (By @lowking0415)
-qq会员签到 = type=cron,cronexp=0 0 0,1 * * ?,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js,script-update-interval=0
