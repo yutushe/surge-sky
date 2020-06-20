@@ -6,7 +6,7 @@ quantumultx用
 
 
 //直接用NobyDa的jd cookie
-const cookie = $persistentStore.read('CookieJD')
+const cookie = $prefs.valueForKey('CookieJD')
 const name = '京东种豆得豆'
 
 //京东接口地址
