@@ -1,0 +1,10 @@
+#!name=JD种豆
+#!desc=JD种豆
+#!system=ios
+
+# 定时脚本
+
+[Script]
+
+# > 京东种豆 (By liuxiaoyucc)
+京东种豆= type=cron,cronexp=9 0 * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/jd_plantBean%20(2).js
