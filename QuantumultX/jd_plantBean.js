@@ -105,7 +105,7 @@ var plantUuids = [ // 这个列表填入你要助力的好友的plantUuid
     '',
     '',
     '',
-    '',
+    'mlrdw3aw26j3x4al4p5637nwtvkf2htda5xexny',
     'mowivccfqf5lzbqozumcrkaxdm'
 ]
 
