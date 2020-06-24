@@ -1,12 +1,101 @@
 /*
-种豆得豆
-quantumultx用
+种豆得豆 搬的https://github.com/uniqueque/QuantumultX/blob/4c1572d93d4d4f883f483f907120a75d925a693e/Script/jd_joy.js
 会自动关注任务中的店铺跟商品
+// quantumultx
+[task_local]
+1 7-21/2 * * * jd_plantBean.js
+// Loon
+cron "1 7-21/2 * * *" script-path=https://github.com/nzw9314/QuantumultX/raw/master/Task/jd_plantBean.js,tag=京东种豆得豆
 */
 
+const $hammer = (() => {
+    const isRequest = "undefined" != typeof $request,
+        isSurge = "undefined" != typeof $httpClient,
+        isQuanX = "undefined" != typeof $task;
+
+    const log = (...n) => { for (let i in n) console.log(n[i]) };
+    const alert = (title, body = "", subtitle = "", link = "") => {
+        if (isSurge) return $notification.post(title, subtitle, body, link);
+        if (isQuanX) return $notify(title, subtitle, (link && !body ? link : body));
+        log("==============📣系统通知📣==============");
+        log("title:", title, "subtitle:", subtitle, "body:", body, "link:", link);
+    };
+    const read = key => {
+        if (isSurge) return $persistentStore.read(key);
+        if (isQuanX) return $prefs.valueForKey(key);
+    };
+    const write = (val, key) => {
+        if (isSurge) return $persistentStore.write(val, key);
+        if (isQuanX) return $prefs.setValueForKey(val, key);
+    };
+    const request = (method, params, callback) => {
+        /**
+         * 
+         * params(<object>): {url: <string>, headers: <object>, body: <string>} | <url string>
+         * 
+         * callback(
+         *      error, 
+         *      <response-body string>?,
+         *      {status: <int>, headers: <object>, body: <string>}?
+         * )
+         * 
+         */
+        let options = {};
+        if (typeof params == "string") {
+            options.url = params;
+        } else {
+            options.url = params.url;
+            if (typeof params == "object") {
+                params.headers && (options.headers = params.headers);
+                params.body && (options.body = params.body);
+            }
+        }
+        method = method.toUpperCase();
+
+        const writeRequestErrorLog = function (m, u) {
+            return err => {
+                log("=== request error -s--");
+                log(`${m} ${u}`, err);
+                log("=== request error -e--");
+            };
+        }(method, options.url);
+
+        if (isSurge) {
+            const _runner = method == "GET" ? $httpClient.get : $httpClient.post;
+            return _runner(options, (error, response, body) => {
+                if (error == null || error == "") {
+                    response.body = body;
+                    callback("", body, response);
+                } else {
+                    writeRequestErrorLog(error);
+                    callback(error);
+                }
+            });
+        }
+        if (isQuanX) {
+            options.method = method;
+            $task.fetch(options).then(
+                response => {
+                    response.status = response.statusCode;
+                    delete response.statusCode;
+                    callback("", response.body, response);
+                },
+                reason => {
+                    writeRequestErrorLog(reason.error);
+                    callback(reason.error);
+                }
+            );
+        }
+    };
+    const done = (value = {}) => {
+        if (isQuanX) return isRequest ? $done(value) : null;
+        if (isSurge) return isRequest ? $done(value) : $done();
+    };
+    return { isRequest, isSurge, isQuanX, log, alert, read, write, request, done };
+})();
 
 //直接用NobyDa的jd cookie
-const cookie = $prefs.valueForKey('CookieJD')
+const cookie = $hammer.read('CookieJD')
 const name = '京东种豆得豆'
 
 //京东接口地址
@@ -14,11 +103,11 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
 
 var plantUuids = [ // 这个列表填入你要助力的好友的plantUuid
     'qawf5ls3ucw25yhfulu32xekqy3h7wlwy7o5jii',
-'022ec75f750e41c09114070fb4a00f16',
-'e7lhibzb3zek2evddq2ijrytrlvhppccfmfdbfa',
-'jpuiaplgo45pwt6yhagbwkq5tu',
-'jezqczgr4tsechfwoeoyp4regm',
-'mowivccfqf5lzbqozumcrkaxdm',
+    '022ec75f750e41c09114070fb4a00f16',
+    'e7lhibzb3zek2evddq2ijrytrlvhppccfmfdbfa',
+    'jpuiaplgo45pwt6yhagbwkq5tu',
+    'jezqczgr4tsechfwoeoyp4regm',
+    'mowivccfqf5lzbqozumcrkaxdm'
 ]
 
 
@@ -142,17 +231,25 @@ function* step() {
                 }
             } else if (task.taskType == 4) {
                 //逛逛会场
-                if (task.isFinished != 1&&task.gainedNum=='0') {
+                if (task.isFinished != 1 && task.gainedNum == '0') {
                     if (plantBeanIndexResult.data.roundList[1].roundState == 2) {
                         let purchaseRewardTaskResult = yield purchaseRewardTask(plantBeanIndexResult.data.roundList[1].roundId)
                         console.log(`purchaseRewardTaskResult:${JSON.stringify(purchaseRewardTaskResult)}`)
                     }
                 }
+            } else if (task.taskType == 1) {
+                console.log('跳过签到，NobyDa的会签')
+                // console.log(`【${task.taskName}】未开发${task.awardType},${task.taskType}`)
             } else {
                 console.log(`【${task.taskName}】未开发${task.awardType},${task.taskType}`)
             }
             console.log(`【${task.taskName}】任务结束`)
         }
+
+        //任务列表少了金融双签，拉出来执行下
+        console.log(`金融双签`)
+        let receiveNutrientsTaskResult = yield receiveNutrientsTask(7)
+        console.log(`receiveNutrientsTaskResult:${JSON.stringify(receiveNutrientsTaskResult)}`)
 
         //助力好友
         console.log('开始助力好友')
@@ -163,12 +260,16 @@ function* step() {
             }
             console.log(`开始助力好友: ${plantUuid}`);
             let helpResult = yield helpShare(plantUuid)
-            if (helpResult.code == 0 ) {
+            if (helpResult.code == 0) {
                 console.log(`助力好友结果: ${JSON.stringify(helpResult.data.helpShareRes)}`);
             } else {
                 console.log(`助力好友失败: ${JSON.stringify(helpResult)}`);
             }
         }
+
+        //todo 扭蛋
+
+
         plantBeanIndexResult = yield plantBeanIndex()
         if (plantBeanIndexResult.code == '0') {
             let plantBeanRound = plantBeanIndexResult.data.roundList[1]
@@ -194,7 +295,7 @@ function* step() {
     } else {
         message = '请先获取cookie\n直接使用NobyDa的京东签到获取'
     }
-    $notify(name, '', message)
+    $hammer.alert(name, message)
 }
 
 function purchaseRewardTask(roundId) {
@@ -209,15 +310,16 @@ function purchaseRewardTask(roundId) {
 }
 
 function receiveNutrientsTask(awardType) {
-    let functionId = arguments.callee.name.toString();
-    let body = {
-        "monitor_refer": "plant_receiveNutrientsTask",
-        "monitor_source": "plant_app_plant_index",//plant_app_plant_index,plant_m_plant_index
-        "awardType": `"${awardType}"`,
-        "version": "9.0.0.1"// "9.0.0.1", "8.4.0.0"
-    }
-    // requestGet(`https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=%7B%22awardType%22%3A%22${awardType}%22%2C%22monitor_source%22%3A%22plant_m_plant_index%22%2C%22monitor_refer%22%3A%22plant_receiveNutrientsTask%22%2C%22version%22%3A%228.4.0.0%22%7D&appid=ld&client=apple&clientVersion=&networkType=&osVersion=&uuid=&jsonp=jsonp_1592470025833_64949`)
-    request(functionId, body);// `body=${escape(JSON.stringify(body))}&client=apple&appid=ld`
+    // let functionId = arguments.callee.name.toString();
+    // let body = {
+    //     "monitor_refer": "plant_receiveNutrientsTask",
+    //     "monitor_source": "plant_m_plant_index",//plant_app_plant_index,plant_m_plant_index
+    //     "awardType": `"${awardType}"`,
+    //     "version": "9.0.0.1"// "9.0.0.1", "8.4.0.0"
+    // }
+    //这里很奇怪，试了很多情况都不行，直接这样了
+    requestGet(`https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=%7B%22awardType%22%3A%22${awardType}%22%2C%22monitor_source%22%3A%22plant_m_plant_index%22%2C%22monitor_refer%22%3A%22plant_receiveNutrientsTask%22%2C%22version%22%3A%228.4.0.0%22%7D&appid=ld&client=apple&clientVersion=&networkType=&osVersion=&uuid=`)
+    // request(functionId, body);// `body=${escape(JSON.stringify(body))}&client=apple&appid=ld`
 }
 
 //https://api.m.jd.com/client.action?functionId=receiveNutrients
@@ -295,7 +397,7 @@ function helpShare(plantUuid) {
         "monitor_refer": "",
         "wxHeadImgUrl": "",
         "shareUuid": "",
-        "followType": "1",
+        "followType": "0",
         "monitor_source": "plant_m_plant_index",
         "version": "9.0.0.1"
     }
@@ -309,22 +411,33 @@ function plantBeanIndex() {
     request(functionId, body);//plantBeanIndexBody
 }
 
+function requestGet(url){
+    const option =  {
+        url: url,
+        headers: {
+            Cookie: cookie,
+        }
+    };
+    $hammer.request('GET', option, (error, response) => {
+        error ? $hammer.log("Error:", error) : sleep(JSON.parse(response));
+    })
+}
+
 function request(function_id, body = {}) {
-    $task.fetch(taskurl(function_id, body)).then(
-        (response) => {
-            return JSON.parse(response.body)
-        },
-        (reason) => console.log(reason.error, reason)
-    ).then((response) => sleep(response))
+    $hammer.request('POST', taskurl(function_id, body), (error, response) => {
+        error ? $hammer.log("Error:", error) : sleep(JSON.parse(response));
+    })
 }
 
 function taskurl(function_id, body) {
+    // console.log(`${JD_API_HOST}?functionId=${function_id}&body=${escape(JSON.stringify(body))}&appid=ld&client=apple&clientVersion=&networkType=&osVersion=&uuid=`)
     return {
-        url: `${JD_API_HOST}?functionId=${function_id}&body=${escape(JSON.stringify(body))}&appid=ld&client=apple&clientVersion=&networkType=&osVersion=&uuid=`,
+        // url: `${JD_API_HOST}?functionId=${function_id}&body=${escape(JSON.stringify(body))}&appid=ld&client=apple&clientVersion=&networkType=&osVersion=&uuid=`,
+        url: JD_API_HOST,
+        body: `functionId=${function_id}&body=${JSON.stringify(body)}&appid=ld&client=apple&clientVersion=&networkType=&osVersion=&uuid=`,
         headers: {
             Cookie: cookie,
-        },
-        method: "GET",
+        }
     }
 }
 
@@ -352,4 +465,4 @@ function getParam(url, name) {
     var r = url.match(reg);
     if (r != null) return unescape(r[2]);
     return null;
-} 
+}
