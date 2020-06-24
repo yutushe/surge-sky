@@ -68,11 +68,3 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 # 打开腾讯新闻app，阅读一篇文章，右下角出现红包，倒计时结束后即可
 腾讯新闻 = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js,script-update-interval=0
 
-# > 中青看点极速版 (By @Macsuny)
-# 1.进入app，签到一次,即可获取Cookie. 
-# 2.阅读一篇文章，获取阅读请求body，
-# 3.在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
-# 4.激励视频获取方法: 关闭vpn，进入任务中心=>抽奖赚点击下面第一个宝箱，出现视频广告页面，然后打开vpn，等待视频播放完毕，点击点我继续领青豆，再重复一次上面操作，获取激励视频请求的body
-中青看点极速版 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,script-update-interval=0
-
-
