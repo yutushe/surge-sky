@@ -2,10 +2,10 @@
 CaiYun Weather (ColorWeather) unlock Vip
 
 QX 1.0.0:
-^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/ColorWeather.js
+^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/ColorWeather.js
 
 Surge4.0:
-http-response ^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/ColorWeather.js
+http-response ^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/ColorWeather.js
 
 QX & Q & Surge MitM = biz.caiyunapp.com
 */
