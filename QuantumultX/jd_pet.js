@@ -93,7 +93,7 @@ const cookie = $hammer.read('CookieJD');
 var shareCodes = [ // 这个列表填入你要助力的好友的shareCode, 最多可能是5个? 没有验证过
     'MTAxODc2NTE0NzAwMDAwMDAyODE4MTM2OQ==',
     'MTAxODc2NTEzMTAwMDAwMDAyNzcxNzI0NQ==',
-    'MTAxODc2NTEzMDAwMDAwMDAyNzE1MjQ2Nw==',
+    '',
     '',
     ''
 ]
