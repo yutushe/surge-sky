@@ -104,7 +104,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
 var plantUuids = [ // 这个列表填入你要助力的好友的plantUuid
     'mowivccfqf5lzbqozumcrkaxdm',
     'xzadqwnts3yngmysvlarrgecuq',
-    ''
+    'ednwkgarjub6tzbxyyjohyghx4'
 ]
 
 
