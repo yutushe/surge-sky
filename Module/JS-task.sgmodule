@@ -46,10 +46,10 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 活动抽奖 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js
 
 # > 京东农场 (By liuxiaoyucc)
-京东农场= type=cron,cronexp=1 0 7,12,18 * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/jd_fruit.js
+京东农场= type=cron,cronexp="1 0 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js
 
 # > 京东萌宠 (By liuxiaoyucc)
-京东萌宠= type=cron,cronexp=7 0 7,12,18 * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/jd_pet.js
+京东萌宠= type=cron,cronexp="1 0 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js
 
 # > 京东宠汪汪 (By uniqueque)
 京东宠汪汪= type=cron,cronexp=0 */3 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_joy.js
@@ -70,3 +70,7 @@ cron "*/5 0-9 * * *" script-path=https://raw.githubusercontent.com/Sunert/Script
 
 # > 中国移动 查话费
 10086-查话费 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
+
+# > 腾讯新闻 (By 红鲤鱼与绿鲤鱼与驴 & Macsuny))
+# 打开腾讯新闻app，阅读一篇文章，右下角出现红包，倒计时结束后即可
+腾讯新闻 = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js,script-update-interval=0
