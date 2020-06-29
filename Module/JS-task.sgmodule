@@ -57,6 +57,9 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 # > 京东种豆得豆 (By uniqueque)
 京东种豆得豆= type=cron,cronexp=1 7-21/3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js
 
+# > 京东摇钱树 (By uniqueque)
+京东摇钱树= type=cron,cronexp=*/6 * * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_moneyTree2.js
+
 # > 滴滴出行 (By @zZPiglet)
 滴滴出行 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 滴滴出行 = type=cron,cronexp=0 59 23 * * *,script-path=script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
@@ -77,3 +80,5 @@ cron "*/5 0-9 * * *" script-path=https://raw.githubusercontent.com/Sunert/Script
 
 # > 切换会话
 切换会话 = type=cron,cronexp="13,30 1-23 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,wake-system=true
+
+
