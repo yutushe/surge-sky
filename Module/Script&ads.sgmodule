@@ -115,6 +115,8 @@ dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 Keep.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic)
 # 扫描全能王 pro
 CamScanner.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js,type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
+# 彩云天气 Vip
+彩云天气 = type=http-response,pattern=https://biz.caiyunapp.com/v2/user\?app_name=weather,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/Surge/master/Script/caiyun.js
 # > 以下为nzw9314收集整理
 # 微商助手(by @superuv)
 wszs.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/wszs.js,type=http-response,pattern=https:\/\/api\.lennou\.com\/user\/info
