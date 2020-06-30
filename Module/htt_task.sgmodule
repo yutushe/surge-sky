@@ -1,0 +1,12 @@
+#!name=Cron-惠头条
+#!desc=搬运demo2099
+#!system=ios
+
+
+[Script]
+
+# 签到脚本
+# > demo2099
+# > 惠头条
+  htt_task = type=cron,cronexp="0 21,31,50 0-22 * * ?",script-path=https://raw.githubusercontent.com/demo2099/jscool/master/demo2099/task/htt_task.js
+

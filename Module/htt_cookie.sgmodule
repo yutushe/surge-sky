@@ -1,0 +1,12 @@
+#!name=Cookie-惠头条
+#!desc=搬运demo2099
+#!system=ios
+
+
+[Script]
+
+# demo2099
+# > 惠头条
+htt_cookie = type=http-request,pattern=https:\/\/api\.cashtoutiao\.com,script-path=https://raw.githubusercontent.com/demo2099/jscool/master/demo2099/task/htt_cookie.js
+[MITM]
+hostname = %APPEND% api.cashtoutiao.com
