@@ -32,7 +32,7 @@ GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercont
 # 打开 APP 进入`我的` -> `疯狂摇摇乐`,系统提示: `签到:获取Cookie: 成功`
 # 阅读时长获取Cookie:打开 APP 选取文章阅读， `书城` > `任意文章阅读` 等到提示获取Cookie成功即可
   米读签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js,script-update-interval=0
-  米读阅读 = type=cron,cronexp=0 * * * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js,script-update-interval=0
+  米读阅读 = type=cron,cronexp=*/1 * * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js,script-update-interval=0
 
 # 时光相册
 # 打开 APP 然后手动签到 1 次
