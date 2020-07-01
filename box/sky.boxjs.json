@@ -1,0 +1,22 @@
+{
+  “ id”：“ yutushe.app.sub”，
+  “ name”：“ 宠汪汪应用订阅”，
+  “作者”：“ @ yutushe”，
+  “ icon”：“ https://raw.githubusercontent.com/Darren-X1/S/master/Others/Pic/9.png”，
+  “ repo”：“ https://github.com/yutushe/surge-sky”，
+  “应用”： [
+    {
+      “ id”：“ jd_joy，
+      “名称”：“宠汪汪”，
+      “ keys”：[
+        "CookieJD",
+        "jd_fruit_name",
+        "CookieJD",
+        "jd_fruit_name"
+      ],
+      “作者”：“ @ yutushe”，
+      “ repo”：“ https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_joy.js”，
+      “ icons”：[“ https://raw.githubusercontent.com/Orz-3/task/master/jd.png"、"https://raw.githubusercontent.com/Orz-3/task/master/jd.png“]
+    }
+  ]
+}
