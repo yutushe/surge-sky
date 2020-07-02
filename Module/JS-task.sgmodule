@@ -55,13 +55,13 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 京东萌宠= type=cron,cronexp="10 4,20 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js,wake-system=true
 
 # > 京东宠汪汪 (By uniqueque)
-京东宠汪汪= type=cron,cronexp=10,28 */3 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_joy.js
+京东宠汪汪= type=cron,cronexp=10,28 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js,wake-system=true
 
 # > 京东种豆得豆会话 (By uniqueque)
 京东种豆得豆= type=cron,cronexp="10 1,15 7-21/2 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js,wake-system=true
 
 # > 京东摇钱树 (By uniqueque)
-京东摇钱树= type=cron,cronexp=*/6 * * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_moneyTree2.js, wake-system=0
+京东摇钱树= type=cron,cronexp=*/6 * * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_moneyTree2.js,wake-system=false
 
 # > 滴滴出行 (By @zZPiglet)
 滴滴出行 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
