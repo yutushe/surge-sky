@@ -2,10 +2,6 @@
 #!desc=自用，仅收集自己需要的定时签到(集成： NobyDa、Chavy、nzw9314)
 #!system=ios
 
-# Task配置 By nzw9314
-# GitHub主页(https://github.com/nzw9314)
-# TG通知频道 (https://t.me/nzw9314News)
-# 定时脚本
 
 [Script]
 
@@ -15,8 +11,6 @@ AppMonitor.js = type=cron,cronexp=0 0 * * * *,script-path=https://raw.githubuser
 # > TestFlight公测监控 (By @syzzzf)
 # 需要自己填appkey
 testflight.js = script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/testflight.js,tag=TestFlight公测监控,type=cron,cronexp=0 0 * * * *
-# > 每日一句+ 蚂蚁森林收能量
-每日一句+蚂蚁森林收能量 = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/yichahucha/cron_daily.js,type=cron,cronexp=0 30 7 * * *
 # > GitHub监控(By Peng-YM)
 GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
 
@@ -39,11 +33,7 @@ everphoto.js = type=cron,cronexp=45 2 0 * * *,script-path=https://raw.githubuser
 # 打开 APP 进入签到:  `右上角` > `签到`
 # 阅读篇数获取Cookie:`小视频`中播放一段时间视频即可获取,具体的阅读篇数奖励请到应用内手动点击
 # 首页金币奖励:此Cookie在首页的推荐中随机出现,随机获取,并不一定会出现。
-qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,script-update-interval=0
-
-# > 微信小程序-活动抽奖 (By @makexp & @zZPiglet)
-#打开微信小程序 进入“活动抽奖”，手动签到一次或点击“已签到”
-活动抽奖 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js
+qtt.js = type=cron,cronexp=0 0/15 * * * ?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,script-update-interval=0
 
 # > 京东农场会话 (By liuxiaoyucc)
 京东农场= type=cron,cronexp="10 0 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js,wake-system=true
@@ -52,10 +42,10 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 京东萌宠= type=cron,cronexp="10 4 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js,wake-system=true
 
 # > 京东宠汪汪 (By uniqueque)
-京东宠汪汪= type=cron,cronexp=10 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js,wake-system=true
+京东宠汪汪= type=cron,cronexp=15 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js,wake-system=true
 
 # > 京东种豆得豆会话 (By uniqueque)
-京东种豆得豆= type=cron,cronexp="10 2 7-21/2 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js,wake-system=true
+京东种豆得豆= type=cron,cronexp="0 2 7-21/2 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js,wake-system=true
 
 # > 京东摇钱树 (By uniqueque)
 京东摇钱树= type=cron,cronexp=1 */2 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_moneyTree2.js
@@ -72,7 +62,7 @@ qtt.js = type=cron,cronexp=0 0/1 * * *,script-path=https://raw.githubusercontent
 # 2.阅读一篇文章，获取阅读请求body，
 # 3.在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
 # 4.激励视频获取方法: 关闭vpn，进入任务中心=>抽奖赚点击下面第一个宝箱，出现视频广告页面，然后打开vpn，等待视频播放完毕，点击点我继续领青豆，再重复一次上面操作，获取激励视频请求的body
-cron "*/5 0-9 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版
+cron "0 0-20/2 */2 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版
 
 # > 中国移动 查话费
 10086-查话费 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
@@ -83,9 +73,13 @@ cron "*/5 0-9 * * *" script-path=https://raw.githubusercontent.com/Sunert/Script
 # > flow(By Peng-YM)
 flow= type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/flow.js,,wake-system=true
 
-
 # > 腾讯新闻
 腾讯新闻2 = type=cron,cronexp=*/5 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews2.js,script-update-interval=0
+
+# 惠头条签(By 红鲤鱼与绿鲤鱼与驴)
+# 作者的邀请码:53150681 
+#时段签到, 阅读数据, 小视频和视频 4个cookie
+惠头条 type=cron,cronexp=*/2 5-23/1 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/htt_task.js
 
 
 
