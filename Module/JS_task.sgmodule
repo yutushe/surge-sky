@@ -17,7 +17,7 @@ GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercont
 # 签到脚本
 # > NobyDa
 # > 京东
-  京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/JD_DailyBonus.js
+  京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path= https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
   
 # 米读
 # 打开 APP 进入`我的` -> `疯狂摇摇乐`,系统提示: `签到:获取Cookie: 成功`
@@ -62,7 +62,7 @@ qtt.js = type=cron,cronexp=0 0/15 * * * ?,script-path=https://raw.githubusercont
 # 2.阅读一篇文章，获取阅读请求body，
 # 3.在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
 # 4.激励视频获取方法: 关闭vpn，进入任务中心=>抽奖赚点击下面第一个宝箱，出现视频广告页面，然后打开vpn，等待视频播放完毕，点击点我继续领青豆，再重复一次上面操作，获取激励视频请求的body
-cron "0 0-20/2 */2 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版,script-update-interval=0
+cron "0 0-20/2 */2 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版,wake-system=true
 
 # > 中国移动 查话费
 10086-查话费 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
