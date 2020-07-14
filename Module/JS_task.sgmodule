@@ -5,12 +5,6 @@
 
 [Script]
 
-# App价格版本监控
-# 需要填appid
-AppMonitor.js = type=cron,cronexp=0 0 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Others/AppMonitor.js
-# > TestFlight公测监控 (By @syzzzf)
-# 需要自己填appkey
-testflight.js = script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/testflight.js,tag=TestFlight公测监控,type=cron,cronexp=0 0 * * * *
 # > GitHub监控(By Peng-YM)
 GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
 
@@ -29,12 +23,6 @@ GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercont
 # 打开 APP 然后手动签到 1 次
 everphoto.js = type=cron,cronexp=45 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js,script-update-interval=0
 
-# 趣头条
-# 打开 APP 进入签到:  `右上角` > `签到`
-# 阅读篇数获取Cookie:`小视频`中播放一段时间视频即可获取,具体的阅读篇数奖励请到应用内手动点击
-# 首页金币奖励:此Cookie在首页的推荐中随机出现,随机获取,并不一定会出现。
-qtt.js = type=cron,cronexp=0 0/15 * * * ?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,wake-system=0
-
 # > 京东农场会话 (By liuxiaoyucc)
 京东农场= type=cron,cronexp="10 0 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js,wake-system=true
 
@@ -42,7 +30,7 @@ qtt.js = type=cron,cronexp=0 0/15 * * * ?,script-path=https://raw.githubusercont
 京东萌宠= type=cron,cronexp="10 4 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js,wake-system=true
 
 # > 京东宠汪汪 (By uniqueque)
-京东宠汪汪= type=cron,cronexp=17 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js,wake-system=true
+京东宠汪汪= type=cron,cronexp=15 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js,wake-system=true
 
 # > 京东种豆得豆会话 (By uniqueque)
 京东种豆得豆= type=cron,cronexp="0 2 7-21/2 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js,wake-system=true
@@ -71,10 +59,10 @@ cron "0 0-20/2 */2 * * *" script-path=https://raw.githubusercontent.com/Sunert/S
 #切换会话 = type=cron,cronexp="0 */1 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,wake-system=true
 
 # > flow(By Peng-YM)
-flow= type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/flow.js,wake-system=true
+flow= type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js,wake-system=true
 
 # > 腾讯新闻
-腾讯新闻2 = type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews3.js,script-update-interval=0
+腾讯新闻3 = type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews3.js,script-update-interval=0
 
 
 
