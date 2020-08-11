@@ -48,9 +48,9 @@ const notifyInterval = 4; //视频红包间隔通知开为1，常关为0
 const logs = 0; // 日志开关
 const cookieName = '腾讯新闻'
 const sy = init()
-const signurlVal = sy.getdata('sy_signurl_txnews2')
-const cookieVal = sy.getdata( 'sy_cookie_txnews2')
-const videoVal = sy.getdata( 'video_txnews2')
+const signurlVal = sy.getdata('sy_signurl_txnews3')
+const cookieVal = sy.getdata( 'sy_cookie_txnews3')
+const videoVal = sy.getdata( 'video_txnews3')
 
 let isGetCookie = typeof $request !== 'undefined'
 if (isGetCookie) {
@@ -65,14 +65,14 @@ if ($request && $request.method != 'OPTIONS' && $request.url.match(/user\/event\
   const cookieVal = $request.headers['Cookie'];
   sy.log(`signurlVal:${signurlVal}`)
   sy.log(`cookieVal:${cookieVal}`)
-  if (signurlVal) sy.setdata(signurlVal, 'sy_signurl_txnews2')
-  if (cookieVal) sy.setdata(cookieVal,  'sy_cookie_txnews2')
+  if (signurlVal) sy.setdata(signurlVal, 'sy_signurl_txnews3')
+  if (cookieVal) sy.setdata(cookieVal,  'sy_cookie_txnews3')
   sy.msg(cookieName, `获取Cookie: 成功🎉`, ``)
   }
 if ($request && $request.method != 'OPTIONS' && $request.url.match(/user\/event\/report\?/)&&$request.body.indexOf("video_read")!= -1) {
   const videoVal =  $request.url
   sy.log(`videoVal:${videoVal}`)
-  if (videoVal) sy.setdata(videoVal,  'video_txnews2')
+  if (videoVal) sy.setdata(videoVal,  'video_txnews3')
   sy.msg(cookieName, `获取视频地址: 成功🎉`, ``)
   }
  }
