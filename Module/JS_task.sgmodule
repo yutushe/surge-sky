@@ -11,46 +11,22 @@ GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercont
 # 签到脚本
 # > NobyDa
 # > 京东
-  #京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path= https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+  京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path= https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
   
 # 时光相册
 # 打开 APP 然后手动签到 1 次
-everphoto.js = type=cron,cronexp=45 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js,script-update-interval=0
-
-# > 京东农场会话 (By liuxiaoyucc)
-#京东农场= type=cron,cronexp="10 0 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js,wake-system=true
-
-# > 京东萌宠会话 (By liuxiaoyucc)
-#京东萌宠= type=cron,cronexp="10 4 7,12,18 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js,wake-system=true
-
-# > 京东宠汪汪 (By uniqueque)
-#京东宠汪汪= type=cron,cronexp=15 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js,wake-system=true
-
-# > 京东种豆得豆会话 (By uniqueque)
-#京东种豆得豆= type=cron,cronexp="0 2 7-21/2 * * *",script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js,wake-system=true
-
-# > 京东摇钱树 (By uniqueque)
-#京东摇钱树= type=cron,cronexp=1 */1 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_moneyTree2.js
-
-# > 京东天天加速 (By uniqueque)
-#京东天天加速= type=cron,cronexp=1 */3 * * *,script-path=https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js,wake-system=true
+everphoto.js = type=cron,cronexp=45 2 7 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js,script-update-interval=0
 
 # > 滴滴出行 (By @zZPiglet)
-滴滴出行 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行 = type=cron,cronexp=0 9 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 滴滴出行 = type=cron,cronexp=0 59 23 * * *,script-path=script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
 
-# > 中青看点极速版 (By @Macsuny)
-# 1.进入app，签到一次,即可获取Cookie. 
-# 2.阅读一篇文章，获取阅读请求body，
-# 3.在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
-# 4.激励视频获取方法: 关闭vpn，进入任务中心=>抽奖赚点击下面第一个宝箱，出现视频广告页面，然后打开vpn，等待视频播放完毕，点击点我继续领青豆，再重复一次上面操作，获取激励视频请求的body
-#cron "0 0-20/2 */2 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版,wake-system=0
 
 # > 中国移动 查话费
 10086-查话费 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
 
 # > 切换会话
-#切换会话 = type=cron,cronexp="0 */1 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,wake-system=true
+切换会话 = type=cron,cronexp="2 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,wake-system=true
 
 # > 腾讯新闻
 #腾讯新闻3 = type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews3.js,script-update-interval=0
