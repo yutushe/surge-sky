@@ -18,9 +18,7 @@ GitHub监控= type=cron,cronexp=20 0 * * *,script-path=https://raw.githubusercon
 everphoto.js = type=cron,cronexp=45 2 7 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js,script-update-interval=0
 
 # > 滴滴出行 (By @zZPiglet)
-滴滴出行 = type=cron,cronexp=0 14 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
-滴滴出行 = type=cron,cronexp=0 59 23 * * *,script-path=script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
-
+cron "3 0 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/DiDi.js, tag=滴滴出行
 
 # > 中国移动 查话费
 10086-查话费 = type=cron,cronexp=12 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
@@ -31,9 +29,14 @@ everphoto.js = type=cron,cronexp=45 2 7 * * *,script-path=https://raw.githubuser
 # > 腾讯新闻
 #腾讯新闻3 = type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews3.js,script-update-interval=0
 
-
 # > 京东价格提醒(By toulanboy)
 京东价格提醒 = type=cron,cronexp=15 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js
+
+# > 京东大赢家(By yangtingxiao)
+cron "5 9-22 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js, timeout=100, tag=京东大赢家
+
+# > 京东大赢家(By 天天挖矿)
+cron "10 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿
 
 
 
