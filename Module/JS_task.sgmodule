@@ -23,9 +23,6 @@ cron "3 0 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Scri
 # > 中国移动 查话费
 10086-查话费 = type=cron,cronexp=12 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
 
-# > 切换会话
-切换会话 = type=cron,cronexp="3,8 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,wake-system=true
-
 # > 京东价格提醒(By toulanboy)
 京东价格提醒 = type=cron,cronexp=15 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js
 
