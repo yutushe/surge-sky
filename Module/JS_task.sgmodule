@@ -27,7 +27,7 @@ cron "3 0 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Scri
 切换会话 = type=cron,cronexp="3,8 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,wake-system=true
 
 # > 腾讯新闻
-#腾讯新闻3 = type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews3.js,script-update-interval=0
+#腾讯新闻 = type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/yutushe/surge-sky/master/Script/txnews.js,script-update-interval=0
 
 # > 京东价格提醒(By toulanboy)
 京东价格提醒 = type=cron,cronexp=15 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js
@@ -35,7 +35,7 @@ cron "3 0 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Scri
 # > 京东大赢家(By yangtingxiao)
 cron "5 9-22 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js, timeout=100, tag=京东大赢家
 
-# > 京东大赢家(By 天天挖矿)
+# > 天天挖矿(By 天天挖矿)
 cron "10 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿
 
 
