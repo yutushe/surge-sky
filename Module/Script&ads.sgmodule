@@ -6,10 +6,10 @@
 
 
 [Header Rewrite]
-//https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
+
 # 小小影视Vip (By Eric)
 # 会员
-https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace (\r\n)Cookie:.+(\r\n) header-replace $1Cookie: xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930$2
+https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
 # 去广告
 https:\/\/.*\/getGlobalData url script-response-body jscool/Script/xxysad.js
 
