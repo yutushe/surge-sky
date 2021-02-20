@@ -7,7 +7,7 @@
   "apps": [{
     "id": "BBB",
     "name": "步步宝",
-    "keys": ["CookieVal"],
+    "keys": ["bbb_ck"],
     "author": "@yutushe",
     "repo": "https://github.com/yutushe/surge-sky/blob/master/BBB.js",
     "icons": ["https://qxzy.top/rules/QuantumultX/img/bbb.png", "https://qxzy.top/rules/QuantumultX/img/bbb.png"],
