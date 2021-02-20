@@ -10,7 +10,7 @@
     "keys": ["bbb_ck"],
     "author": "@yutushe",
     "repo": "https://github.com/yutushe/surge-sky/blob/master/BBB.js",
-    "icons": ["https://qxzy.top/rules/QuantumultX/img/bbb.png"],
+    "icons": ["https://qxzy.top/rules/QuantumultX/img/bbb.png", "https://qxzy.top/rules/QuantumultX/img/bbb.png"],
     "script": "https://raw.githubusercontent.com/yutushe/surge-sky/master/BBB.js"
   }
 }
