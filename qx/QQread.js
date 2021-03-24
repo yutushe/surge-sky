@@ -30,8 +30,9 @@ hostname=iostgw6.reader.qq.com,newios.reader.qq.com,
 
 ############## 圈x
 #QQ阅读APP获取url
-https:\/\/(iostgw6\.reader\.qq\.com\/*||newios\.reader\.qq\.com\/*) url script-request-header https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/QQread.js   
+https:\/\/(iostgw6\.reader\.qq\.com\/*||newios\.reader\.qq\.com\/*) url script-request-header https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/QQread.js
 
+0,30 8-23 * * * https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/QQread.js
 ############## loon
 #QQ阅读APP获取url
 http-request https:\/\/(iostgw6\.reader\.qq\.com\/*||newios\.reader\.qq\.com\/*) script-path=https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/QQread.js, requires-header=true, tag=QQ阅读APP获取url
