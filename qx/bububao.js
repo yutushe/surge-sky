@@ -49,7 +49,7 @@ hostname=bububao.duoshoutuan.com,
 ############## 圈x
 #步步宝获取TOKEN
 https:\/\/bububao\.duoshoutuan\.com\/user\/* url script-request-header https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/bububao.js
-
+0,30 0-23 * * * https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/bububao.js
 ############## loon
 #步步宝获取TOKEN
 http-response https:\/\/bububao\.duoshoutuan\.com\/user\/* script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/bububao.js, requires-body=1,max-size=0, tag=步步宝获取TOKEN
