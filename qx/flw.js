@@ -57,7 +57,7 @@ hostname=huodong.fanli.com,passport.fanli.com,gw.fanli.com,
 https:\/\/(huodong\.fanli\.com\/*||passport\.fanli\.com\/*||gw\.fanli\.com\/*) url script-request-header https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/flw.js   
 #返利网获取body
 https:\/\/(huodong\.fanli\.com\/*||passport\.fanli\.com\/*||gw\.fanli\.com\/*) url script-request-body https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/flw.js   
-
+0 8,12,23 * * * https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/flw.js
 ############## loon
 #返利网获取header
 http-request https:\/\/(huodong\.fanli\.com\/*||passport\.fanli\.com\/*||gw\.fanli\.com\/*) script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/flw.js, requires-header=true, tag=返利网获取header
