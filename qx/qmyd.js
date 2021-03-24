@@ -36,7 +36,7 @@ hostname=qmyd.yichengw.cn,
 ############## 圈x
 #全民悦动获取TOKEN
 https:\/\/qmyd\.yichengw\.cn\/* url script-request-header https://raw.githubusercontent.com/ziye11/JavaScript/main/Task/qmyd.js
-
+0,30 0-23 * * * https://raw.githubusercontent.com/ziye11/JavaScript/main/Task/qmyd.js
 ############## loon
 #全民悦动获取TOKEN
 http-response https:\/\/qmyd\.yichengw\.cn\/* script-path=https://raw.githubusercontent.com/ziye11/JavaScript/main/Task/qmyd.js, requires-body=1,max-size=0, tag=全民悦动获取TOKEN
